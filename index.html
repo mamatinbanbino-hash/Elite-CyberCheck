@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite CyberCheck | Service Public</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-[#0f172a] text-white">
+    <header class="p-5 border-b border-slate-800 flex justify-between items-center bg-[#1e293b]">
+        <h1 class="text-xl font-bold text-emerald-500">ELITE CYBERCHECK</h1>
+        <a href="#" class="text-[10px] bg-emerald-600 px-3 py-1 rounded-full font-bold">SHOP CHARIOW</a>
+    </header>
+
+    <main class="max-w-xl mx-auto p-6">
+        <div class="text-center my-10">
+            <h2 class="text-3xl font-black mb-2">Analyseur Public</h2>
+            <p class="text-slate-400 text-sm">Outil gratuit de cybersécurité pour la communauté.</p>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded-2xl mb-6 border border-slate-700">
+            <h3 class="font-bold mb-4 flex items-center gap-2">
+                <i class="fas fa-search-location text-emerald-500"></i> Vérifier un lien suspect
+            </h3>
+            <input type="text" id="urlInput" placeholder="https://exemple.com/bonus" 
+                   class="w-full bg-slate-900 p-3 rounded-lg text-sm mb-4 border border-slate-700 outline-none focus:border-emerald-500">
+            <button onclick="analyserLien()" class="w-full bg-emerald-500 py-3 rounded-xl font-bold hover:bg-emerald-600 transition">Lancer l'analyse</button>
+            <div id="resultatLien" class="mt-4 text-xs italic text-slate-400"></div>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+            <h3 class="font-bold mb-4 flex items-center gap-2">
+                <i class="fas fa-lock text-emerald-500"></i> Générer un mot de passe fort
+            </h3>
+            <div id="passBox" class="bg-slate-900 p-4 rounded-lg text-center font-mono text-emerald-400 mb-4 border border-dashed border-emerald-500/30">
+                ********
+            </div>
+            <button onclick="genererPass()" class="w-full border border-emerald-500 text-emerald-500 py-3 rounded-xl font-bold hover:bg-emerald-500 hover:text-white transition">Générer maintenant</button>
+        </div>
+
+        <p class="text-center mt-10 text-[10px] text-slate-500 uppercase tracking-widest">Propulsé par le système NDM-A2</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
